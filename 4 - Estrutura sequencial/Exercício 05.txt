@@ -1,0 +1,33 @@
+Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago.
+
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int codpeca1, qtdpeca1, codpeca2, qtdpeca2;
+		double valorpeca1, valorpeca2, valorPagar;
+		
+		codpeca1 = sc.nextInt();
+		qtdpeca1 = sc.nextInt();
+		valorpeca1 = sc.nextDouble();
+		codpeca2 = sc.nextInt();
+		qtdpeca2 = sc.nextInt();
+		valorpeca2 = sc.nextDouble();
+		
+		valorPagar = valorpeca1 * qtdpeca1 + valorpeca2 * qtdpeca2; 
+		
+		System.out.printf("VALOR A PAGAR = R$ %.2f%n", valorPagar);
+		
+		
+		sc.close();
+	
+	}
+	
+}
